@@ -1,0 +1,33 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: check-added-large-files
+    -   id: check-toml
+-   repo: https://github.com/ambv/black
+    rev: 22.12.0
+    hooks:
+    - id: black # automatic code formatter
+#-   repo: https://github.com/pre-commit/mirrors-autopep8
+#    rev: v1.5.2
+#    hooks:
+#    -   id: autopep8
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.910-1
+    hooks:
+    -   id: mypy # type checker
+-   repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+    rev: v0.1.0
+    hooks:
+    - id: dockerfilelint # checks style of Dockerfiles
+# - repo: https://github.com/IamTheFij/docker-pre-commit
+#   rev: v1.0.1
+#   hooks:
+#     - id: docker-compose-check
+-   repo: https://github.com/hadialqattan/pycln # removes unnecessary imports
+    rev: v1.1.0 # Possible releases: https://github.com/hadialqattan/pycln/tags
+    hooks:
+    - id: pycln
+      args: [--config=pyproject.toml]

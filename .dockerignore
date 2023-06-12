@@ -1,0 +1,11 @@
+__pycache__/*
+.env
+*.md
+docs/*
+.github/*
+.idea
+.pytest_cache/*
+.mypy_cache/*
+tests/*
+logs/*
+research/*
