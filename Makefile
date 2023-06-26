@@ -50,3 +50,6 @@ db_query: pg_start
 
 db_export: pg_start
 	mkdir -p ./backups && docker exec -t postgres pg_dumpall -c -U postgres | gzip > ./backups/tracker_db_backup_$$(date +"%Y-%m-%d_%H_%M_%S").gz
+
+excel_test:
+	poetry run pytest --cov=tracker tests/unit/converters/test_xlsx.py
