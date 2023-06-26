@@ -1,0 +1,33 @@
+jail_population:
+  source_filename: "AbbreRptCurrent"
+  format:
+    default_column_mapping: &default_column_mapping
+        county: County
+        pretrial_felons: Pretrial Felons	
+        convicted: Convicted Felons
+        a: Convicted Felons 
+        b: Sentenced to County Jail Time	
+        c: Parole Violators	
+        d: Parole Violators with a New Charge
+        e: Pretrial Misd.	
+        f: Conv. Misd.	
+        g: Bench Warrants	
+        h: Federal	Pretrial SJF	
+        i: Conv. SJF Sentenced to Co. Jail Time	
+        j: Conv. SJF Sentenced to State Jail	
+        j: Total Others	
+        f: Total Local	
+        rd: Total Contract	
+        df: Total Population	
+        dh: Total Capacity	
+        pct_capacity_available: "% of Capacity	Available Beds"
+    pdf:
+      has_total: true
+      has_header: true
+      column_mapping: *default_column_mapping
+    xlsx:
+      has_total: true
+      has_header: true
+      column_mapping: *default_column_mapping
+
+

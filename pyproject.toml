@@ -9,35 +9,33 @@ authors = ["elaine ayo <projects@elaineayo.com>"]
 scrape = 'extractor.cli:main'
 
 ############### ADDITIONAL DEPENDENCY GROUPS
-# optional dependency groups besides dev/base
+# optional dependency groups besides base
+[tool.poetry.group.dev]
+optional = true
+
 [tool.poetry.group.analytics]
 optional = true
 
-[tool.poetry.group.ci]
-optional = true
-
 ############### DEPENDENCY/BUILD INFORMATION
-
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 click = "*"
-python-dotenv = "^0.11.0"
-sqlalchemy = "^1.3.18"
-psycopg2-binary = "^2.8.6"
-mashumaro = "^1.22"
-requests = "^2.25.1"
+python-dotenv = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+mashumaro = "*"
+requests = "*"
 pendulum = "*"
-types-requests = "^2.26.0"
-bs4 = "^0.0.1"
-alembic = "^1.7.6"
+types-requests = "*"
+bs4 = "*"
+alembic = "*"
 pydantic = "*"
-pandas = "^1.0.1"
-s3fs = "^2022.8.2"
-camelot-py = {version = "*", extras = ["cv"]}
+pandas = "*"
+s3fs = "*"
 sqlmodel = "*"
 
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 coverage = "^5.3"
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"

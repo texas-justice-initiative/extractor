@@ -1,0 +1,6 @@
+tcjs:
+  type: file_download
+  links:  
+    latest: https://www.tcjs.state.tx.us/population-reports/
+    archive: https://www.tcjs.state.tx.us/historical-county-jail-population-reports-abbreviated-population-reports/
+    download_pattern: https://www.tcjs.state.tx.us/wp-content/uploads/{YYYY}/{MM}/{REPORT_FILE_NAME}
