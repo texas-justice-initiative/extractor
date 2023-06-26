@@ -14,6 +14,9 @@ jupyter:
 unit_test:
 	poetry run pytest --cov=tracker tests/unit/
 
+excel_test:
+	poetry run pytest --cov=tracker tests/unit/converters/test_xlsx.py
+
 ## the integration tests require a postgres db; so we need to start/stop it
 integration_test: pg_start integration_runner pg_stop
 
